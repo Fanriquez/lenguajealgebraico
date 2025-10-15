@@ -11,16 +11,36 @@ const btnReiniciar = document.getElementById("btnReiniciar");
 
 let preguntas = [
   { texto: "El doble de un número", correcta: "2x", incorrectas: ["x + 2", "x / 2"] },
-  { texto: "Un número aumentado en cinco", correcta: "x + 5", incorrectas: ["x - 5", "5x"] },
-  { texto: "La suma de dos números distintos", correcta: "x + y", incorrectas: ["x * y", "x - y"] },
-  { texto: "Un número reducido en tres", correcta: "x - 3", incorrectas: ["x + 3", "3x"] },
-  { texto: "Un número dividido entre cinco", correcta: "x / 5", incorrectas: ["5 / x", "x * 5"] },
-  { texto: "El triple de un número menos dos", correcta: "3x - 2", incorrectas: ["3x + 2", "x - 2"] },
-  { texto: "Dos veces un número más otro distinto", correcta: "2x + y", incorrectas: ["x + 2y", "x + y + 2"] },
-  { texto: "La mitad de un número", correcta: "x / 2", incorrectas: ["2 / x", "x * 2"] },
-  { texto: "Un número más cuatro veces otro", correcta: "x + 4y", incorrectas: ["4x + y", "x - 4y"] },
-  { texto: "El promedio de dos números distintos", correcta: "(x + y) / 2", incorrectas: ["x + y / 2", "(x - y) / 2"] }
+  { texto: "El triple de un número", correcta: "3x", incorrectas: ["x + 3", "x / 3"] },
+  { texto: "Un número reducido en tres", correcta: "x - 3", incorrectas: ["3x", "x + 3"] },
+  { texto: "La mitad de un número", correcta: "x / 2", incorrectas: ["2x", "x + 2"] },
+  { texto: "La tercera parte de un número", correcta: "x / 3", incorrectas: ["3x", "x - 3"] },
+  { texto: "La quinta parte de un número", correcta: "x / 5", incorrectas: ["5x", "x - 5"] },
+  { texto: "La suma de dos números distintos", correcta: "x + y", incorrectas: ["xy", "x - y"] },
+  { texto: "La diferencia entre dos números distintos", correcta: "x - y", incorrectas: ["y - x", "x + y"] },
+  { texto: "El producto de dos números distintos", correcta: "xy", incorrectas: ["x + y", "x / y"] },
+  { texto: "El cociente entre dos números distintos", correcta: "x / y", incorrectas: ["y / x", "x * y"] },
+  { texto: "Un número aumentado en el doble del mismo número", correcta: "x + 2x", incorrectas: ["x * 2", "x - 2x"] },
+  { texto: "La suma de un número y el cuadruple de un número distinto", correcta: "x + 4y", incorrectas: ["4x + y", "x - 4y"] },
+  { texto: "La suma de dos números distintos reducida en uno", correcta: "x + y - 1", incorrectas: ["x + y + 1", "(x + y) / 2"] },
+  { texto: "La diferencia entre un número y la mitad de otro distinto", correcta: "x - (y / 2)", incorrectas: ["x + y / 2", "y - x / 2"] },
+  { texto: "El triple de un número más otro distinto", correcta: "3x + y", incorrectas: ["x + 3y", "3(x + y)"] },
+  { texto: "La mitad de la suma de dos números distintos", correcta: "(x + y) / 2", incorrectas: ["x + y / 2", "x - y / 2"] },
+  { texto: "Un número menos la mitad de sí mismo", correcta: "x - x / 2", incorrectas: ["x / 2", "2x"] },
+  { texto: "El doble de la suma de dos números distintos", correcta: "2(x + y)", incorrectas: ["2x + y", "x + 2y"] },
+  { texto: "El triple de un número reducido en dos", correcta: "3x - 2", incorrectas: ["3x + 2", "x - 2"] },
+  { texto: "Un número aumentado en siete", correcta: "x + 7", incorrectas: ["7x", "x - 7"] },
+  { texto: "La suma de un número y el triple de otro distinto", correcta: "x + 3y", incorrectas: ["3x + y", "x - 3y"] },
+  { texto: "La diferencia entre un número y su doble", correcta: "x - 2x", incorrectas: ["2x - x", "x + 2x"] },
+  { texto: "El producto de un número por tres más otro distinto", correcta: "3x + y", incorrectas: ["x + 3y", "3(x + y)"] },
+  { texto: "La mitad de un número aumentado en cuatro", correcta: "x / 2 + 4", incorrectas: ["x / 2 - 4", "x + 4 / 2"] },
+  { texto: "La suma de tres números distintos", correcta: "x + y + z", incorrectas: ["x + y", "x * y * z"] },
+  { texto: "El doble de un número menos su mitad", correcta: "2x - x / 2", incorrectas: ["2x + x / 2", "x - x / 2"] },
+  { texto: "La suma de un número con la mitad de otro distinto", correcta: "x + y / 2", incorrectas: ["x + y * 2", "x - y / 2"] },
+  { texto: "La diferencia entre el doble de un número y otro distinto", correcta: "2x - y", incorrectas: ["x - 2y", "x + 2y"] },
+  }
 ];
+
 
 let preguntaActual = 0;
 let puntaje = 0;
