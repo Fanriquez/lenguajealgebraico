@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Expresiones Algebraicas 🧮</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>🧮 ¡Aprende Expresiones Algebraicas!</h1>
+
+    <div id="pantalla-juego" class="juego oculto">
+      <div class="info">
+        <span>Pregunta: <b id="numPregunta">1</b>/10</span>
+        <span>⭐ Puntos: <b id="puntos">0</b></span>
+      </div>
+
+      <div id="pregunta" class="pregunta"></div>
+      <div id="opciones" class="opciones"></div>
+
+      <div id="resultado" class="resultado"></div>
+    </div>
+
+    <div id="pantalla-final" class="final oculto">
+      <h2>🎉 ¡Juego terminado!</h2>
+      <p>Tu puntaje final fue:</p>
+      <h3 id="puntaje-final">0 / 10</h3>
+      <button id="btnReiniciar">🔁 Jugar otra vez</button>
+    </div>
+
+    <button id="botonInicio" class="inicio">🎲 Comenzar</button>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
